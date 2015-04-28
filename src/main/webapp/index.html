@@ -1,0 +1,167 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Plantsmiles Eats</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/skel.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/style-wide.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/bootstrap.css" />
+    <!-- endbuild -->
+</head>
+<body ng-app="plantsmileseatsApp">
+<!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<!--<div class="development"></div>-->
+<!-- Header -->
+<div id="header" ng-controller="MenuController">
+
+    <!-- Logo -->
+    <h1><a href="index.html" id="logo">PlantSmiles</a></h1>
+
+    <!-- Nav -->
+    <nav id="nav">
+        <ul>
+            <li ng-class="{current:isActive('')}"><a href="index.html">Home</a></li>
+            <li ng-class="{current:isActive('/cook')}"><a href="#/cook">Cook</a></li>
+            <li ng-class="{current:isActive('/eat')}"><a href="#/eat">Eat</a></li>
+            <li ng-class="{current:isActive('/drink')}"><a href="#/drink">Drink</a></li>
+            <li ng-class="{current:isActive('/play')}"><a href="#/play">Play</a></li>
+            <li ng-class="{current:isActive('/about')}"><a href="#/about">About</a></li>
+        </ul>
+    </nav>
+
+</div>
+
+<div ng-view=""></div>
+
+<!-- Footer -->
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <section class="3u 6u(narrower) 12u$(mobilep)">
+                <h3>Neato Links</h3>
+                <ul class="links">
+                    <li><a href="#">Mattis et quis rutrum</a></li>
+                    <li><a href="#">Suspendisse amet varius</a></li>
+                </ul>
+            </section>
+            <section class="6u 12u(narrower)">
+                <h3>Get In Touch</h3>
+                <form>
+                    <div class="row 50%">
+                        <div class="6u 12u(mobilep)">
+                            <input type="text" name="name" id="name" placeholder="Name" />
+                        </div>
+                        <div class="6u 12u(mobilep)">
+                            <input type="email" name="email" id="email" placeholder="Email" />
+                        </div>
+                    </div>
+                    <div class="row 50%">
+                        <div class="12u">
+                            <textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="row 50%">
+                        <div class="12u(mobilep)">
+                            <ul class="actions">
+                                <li><input type="submit" class="button alt" value="Send Message" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <!-- Icons -->
+    <ul class="icons">
+        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+        <li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+    </ul>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <ul class="menu">
+            <li>&copy; PlantSmiles All rights reserved</li><li><a href="http://yelp.com">Yelp</a></li>
+        </ul>
+    </div>
+
+</div>
+
+<script>
+//google analytics goes here
+</script>
+
+<!-- build:js scripts/scripts.js -->
+<script src="bower_components/modernizr/modernizr.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-translate/angular-translate.js"></script>
+<script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+<script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+<script src="bower_components/angular-dynamic-locale/src/tmhDinamicLocale.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/affix.js"></script>
+<script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/alert.js"></script>
+<script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
+<script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
+<script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/modal.js"></script>
+<script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/transition.js"></script>
+<script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/button.js"></script>
+<script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/popover.js"></script>
+<script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/carousel.js"></script>
+<script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
+<script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/collapse.js"></script>
+<script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/tab.js"></script>
+<!--<script src="bower_components/oauth-signature/dist/oauth-signature.min.js"></script>-->
+<script src="bower_components/lodash/dist/lodash.min.js"></script>
+<script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+
+<script src="scripts/http-auth-interceptor.js"></script>
+<script src="scripts/truncate.js"></script>
+<script src="scripts/utils.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/constants.js"></script>
+<script src="scripts/services/services.js"></script>
+<script src="scripts/directives.js"></script>
+<script src="scripts/controllers/MainController.js"></script>
+<script src="scripts/controllers/ActivationController.js"></script>
+<script src="scripts/controllers/AdminController.js"></script>
+<script src="scripts/controllers/AuditsController.js"></script>
+<script src="scripts/controllers/HealthController.js"></script>
+<script src="scripts/controllers/LanguageController.js"></script>
+<script src="scripts/controllers/LoginController.js"></script>
+<script src="scripts/controllers/LogoutController.js"></script>
+<script src="scripts/controllers/LogsController.js"></script>
+<script src="scripts/controllers/MenuController.js"></script>
+<script src="scripts/controllers/MetricsController.js"></script>
+<script src="scripts/controllers/PasswordController.js"></script>
+<script src="scripts/controllers/SessionsController.js"></script>
+<script src="scripts/controllers/SettingsController.js"></script>
+<script src="scripts/controllers/GetLocationModalController.js"></script>
+<script src="scripts/services/GoogleMapService.js"></script>
+<script src="scripts/services/YelpApiService.js"></script>
+<script src="scripts/filters/TelephoneFilter.js"></script>
+<script src="bower_components/zerofour/jquery.dropotron.min.js"></script>
+<script src="bower_components/zerofour/skel.min.js"></script>
+<script src="bower_components/zerofour/skel-layers.min.js"></script>
+<script src="bower_components/zerofour/init.js"></script>
+<!-- endbuild -->
+</body>
+</html>

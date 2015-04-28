@@ -1,0 +1,80 @@
+.angular-google-map-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* fix for Twitter Bootstrap handling of responsive images */
+.angular-google-map img {
+    max-width: none;
+}
+
+.angular-google-map {
+    top: 80px;
+}
+
+/** FIX for Bootstrap and Google Maps Info window styes problem **/
+img[src*="gstatic.com/"], img[src*="googleapis.com/"] {
+    max-width: none;
+}
+
+.mapMarker {
+    /*max-height: 200px;*/
+    /*max-width: 200px;*/
+}
+
+a[href^=tel]{
+    color:inherit;
+    text-decoration:inherit;
+    font-size:inherit;
+    font-style:inherit;
+    font-weight:inherit;
+}
+
+.modal {
+    text-align: center;
+}
+
+.modal button {
+    background-color: #afad54;
+    color: #fff;
+
+}
+
+.modal button:hover {
+    background-color: #afad54;
+    color: #fff;
+}
+
+.modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.circular {
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    background: url("../images/about.jpg") no-repeat;
+    background-position:40% 3%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+
+#mapSection {
+    background-size: auto;
+    height: 28em;
+    text-align: center;
+    position: relative;
+}

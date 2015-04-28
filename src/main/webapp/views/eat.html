@@ -1,0 +1,88 @@
+
+<div>
+    <script type="text/ng-template" id="getLocation.html">
+        <div class="modal-header">
+            I'm having trouble locating you.  Where are you?
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="location" >Location</label>
+                <input id="location" type="text" name="location" class="form-control" ng-model="data.name" placeholder="ex. Denver, CO or 200 East Colfax Avenue, Denver, CO 80203" required>
+                <p ng-show="form.userForm.name.$invalid && !form.userForm.name.$pristine" class="help-block">You name is required.</p>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="button btn-sm" ng-click="ok()">GO</button>
+            <button class="button btn-sm" ng-click="cancel()">No Thanks</button>
+        </div>
+    </script>
+</div>
+
+<!-- Main -->
+<section class="wrapper style1">
+    <div class="container">
+        <div id="content">
+
+            <!-- Content -->
+
+            <article>
+                <header>
+                    <h2>Eat</h2>
+                    <p>Let me help you with that.</p>
+                </header>
+
+                <section id="mapSection">
+                    <div id="map_canvas">
+                        <ui-gmap-google-map center='map.center' zoom='map.zoom' dragging="map.dragging"
+                                            bounds="map.bounds"
+                                            events="map.events"
+                                            options="map.options"
+                                            pan="false"
+                                            control="map.control">
+
+                            <ui-gmap-markers models="businesses" coords="'self'" icon="'icon'" click="'onClicked'" fit='true' options="'options'"
+                                             doCluster="false">
+                                <ui-gmap-windows show="'showWindow'" closeClick="'closeClick'" ng-cloak>
+                                    <div ng-non-bindable class="gm-style-iw" style="top: 5px; position: absolute; left: 7px;">
+                                        <div>
+                                            <div class="gm-iw gm-sm" jstcache="0" style="width: 200px;">
+                                                <div class="gm-title" jscontent="i.result.name" jstcache="1">{{ name }}</div>
+                                                <div class="gm-basicinfo" jstcache="0">
+                                                    <div class="gm-addr" jsdisplay="i.result.formatted_address" jscontent="i.result.formatted_address" jstcache="3">
+                                                        {{ address }}
+                                                    </div>
+                                                    <div class="gm-phone" jsdisplay="i.result.formatted_phone_number" jscontent="i.result.formatted_phone_number" jstcache="5">
+                                                        <a href="tel://{{ phone }}">{{ phone | tel }}</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                        <!--<div ng-non-bindable>-->
+                                        <!--<b>{{ name }}</b>-->
+                                        <!--<br>-->
+                                        <!--<a href="tel://{{ phone }}">{{ phone | tel }}</a>-->
+                                        <!--<br>-->
+                                        <!--<a href="http://maps.apple.com/?q={{ address }}">{{ address }}</a>-->
+                                        <!--&lt;!&ndash;<a href='http://maps.google.com/maps?q=New+York+city&hl=en&sll=37.0625,-95.677068&sspn=58.598104,135.263672&vpsrc=1&hnear=New+York&t=m&z=11'>View in google maps</a>&ndash;&gt;-->
+                                        <!--</div>-->
+                                </ui-gmap-windows>
+                            </ui-gmap-markers>
+                        </ui-gmap-google-map>
+                    </div>
+                </section>
+
+                <p></p>
+                <h3>Fooood Man</h3>
+                <p>Somedays it feels like finding an all veggie menu is like winning PowerBall.  We typically celebrate by ordering half of it and waddling home with gluttonous grins from ear-to-ear.  Its not always that easy though, and depending on where you live it can be next to impossible to order off the menu at a restaurant without getting pasta.  We recently found ourselves for a happy hour at Chilis (come on! bottomless chips and salsa!!!) and were very happy to see that they have added a veggie burger patty to their menu.  They did sadly do away with the mushroom fajitas though.</p>
+
+                <p>We have both found ourselves with no other option than to saddle up at the Outback or Ruth Chris.  In cases like this, its easy to order a side vegetable with a baked potato topped in salsa- or if you’re really feeling rowdy just mix all three up! It never hurts to ask the server what the kitchen will do to accommodate you, we are  always happy to see how willing places are to make some substitutions.</p>
+
+                <p>For as many times as we have struggled to order at some of the larger chain restaurants, we have been just as thrilled to see that theres a handful of state and national chains that cater to plant based eaters.  <a href="http://www.truefoodkitchen.com">True Food Kitchen</a> is now in six different states offering delicious options for meat and non-meat eaters alike, my go to is the Tuscan Kale Salad which can be found in their cookbook.   <a href="https://www.nativefoods.com">Native Foods</a> is also rapidly expanding as quick stop with an entirely vegan menu that's also super affordable.</p>
+            </article>
+
+        </div>
+    </div>
+</section>

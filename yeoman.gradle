@@ -1,0 +1,13 @@
+//apply plugin: 'node'
+//apply plugin: 'grunt'
+//
+//task bower(dependsOn: 'npmInstall', type: NodeTask){
+//    script = file('node_modules/bower/bin/bower')
+//    args = ['install']
+//}
+//
+//
+//grunt_build.dependsOn 'npmInstall'
+//grunt_build.dependsOn 'bower'
+//processResources.dependsOn grunt_build
+//test.dependsOn grunt_test
